@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachelle & Rustom - Wedding Invitation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Allura&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cinzel', serif;
+            background: #e8e5e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: transparent;
+            min-height: 100vh;
+        }
+        
+        /* Header Section */
+        .header {
+			background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('https://github.com/anneraxel/Image/blob/main/bg1.jpg?raw=true');
+			max-width: auto;
+            height: 620px;
+            color: white;
+            padding: 50px 30px 30px;
+            text-align: center;
+
+            padding-bottom: 60px;
+        }
+        
+        .names {
+            font-size: 7em;
+            font-family: 'Cherolina', cursive;
+            margin: -20px 0;
+            font-weight: 400;
+            opacity: 0;
+            animation: flyIn 1s ease-out forwards;
+        }
+        
+        .names:first-of-type {
+            animation-delay: 0.4s;
+        }
+        
+        .names:last-of-type {
+            animation-delay: 0.9s;
+        }
+        
+        @keyframes flyIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .ampersand {
+            font-size: 1.2em;
+            margin: 0px 0;
+            font-family: 'Cinzel', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+			padding: 5px 70px;
+			text-align: right;
+            opacity: 0;
+            animation: flyIn 1s ease-out 0.6s forwards;
+        }
+        
+        .date-short {
+            font-size: 1.5em;
+            margin-top: 30px;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 4px;
+        }
+        
+        /* Photo Section */
+        .photo-section {
+			background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('https://drive.google.com/file/d/1nK6i0aR53PS84CCx39Lcg1GMHUUEkK7r/view?usp=drive_link');
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+	        /* Photo Section */
+        .photo-section2 {
+			background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('https://i.imgur.com/OJMdC6p.jpg');
+			max-width: auto;
+            height: 250px;
+            padding: 40px 30px;
+            text-align: center;
+        }	
+		
+		
+        .photo-frame {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 0px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            background: #d4d9c3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7d5c;
+            font-size: 1.2em;
+        }
+        
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Save the Date Banner */
+        .save-date-banner {
+            background: #6b7d5c;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .save-date-banner p {
+            font-size: 0.9em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        
+        .date-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .date-box {
+            text-align: center;
+        }
+        
+        .date-box .label {
+            font-size: 0.7em;
+            opacity: 0.8;
+            text-transform: uppercase;
+        }
+        
+        .date-box .number {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-with-bg {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('https://i.imgur.com/HvCOMeH.jpeg');
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 50px 30px 0px 30px;
+        }
+        
+        .section-with-bg > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-light {
+            background: white;
+        }
+        
+        .section-icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #6b7d5c;
+        }
+        
+        h2 {
+            font-family: 'Anatomia Free', cursive;
+            font-size: 2.3em;
+            color: #6b7d5c;
+            margin-bottom: 0px;
+            font-weight: 400;
+        }
+        
+              h6 {
+            font-family: 'Anatomia Free', cursive;
+            font-size: 1.5em;
+            color: #6b7d5c;
+            margin-bottom: 0px;
+            font-weight: 400;
+        }
+        
+		
+        .info-text {
+            color: #6b7d5c;
+            line-height: 1.5em;
+            margin: 5px 0;
+			font-weight: 600;
+            font-size: 1.1em;
+        }
+		        .info-text2 {
+            color: #6b7d5c;
+            line-height: 0.7em;
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .location-name {
+            font-size: 1em;
+            color: #6b7d5c;
+            font-weight: 600;
+            margin: 5px 0 0px;
+        }
+        
+        .map-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: transparent;
+            color: #6b7d5c;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 0.9em;
+            border: 2px solid #6b7d5c;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+		
+		        .map-link2 {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: transparent;
+            color: #6b7d5c;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 0.9em;
+            border: 2px solid #6b7d5c;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+		
+        /* Attire Section */
+        .attire-section {
+            background: #6b714c;
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+        }
+        
+        .attire-section p {
+            color: #white;
+            line-height: 2;
+            font-size: 0.9em;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+		        .attire-section h2 {
+            font-family: 'Anatomia Free', cursive;
+            font-size: 2.3em;
+            color: white;
+            margin-bottom: 0px;
+            font-weight: 400;
+        }
+		
+        /* Sponsors Section */
+        .sponsors-section {
+            background: white;
+            padding: 50px 30px;
+        }
+        
+        .sponsors-grid {
+            display: grid;
+			grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .sponsor-group h3 {
+            font-family: 'Allura', cursive;
+            color: #6b7d5c;
+            font-size: 1.8em;
+            margin-bottom: 0px;
+            font-weight: 400;
+        }
+        
+        .sponsor-group p {
+            color: #6b7d5c;
+            line-height: 1.8;
+            font-size: 0.85em;
+            margin: 0px 0;
+        }
+        
+        .parents-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin: 30px 0px;
+            text-align: center;
+        }
+        
+        .parent-box h4 {
+            font-family: 'Allura', cursive;
+            color: #6b7d5c;
+            font-size: 1.8em;
+            margin-bottom: 0px;
+            font-weight: 400;
+        }
+        
+        .parent-box p {
+            color: #6b7d5c;
+		
+            font-size: 0.85em;
+            line-height: 1.6;
+        }
+        
+        /* Gift Suggestion */
+        .gift-section {
+            background: #6b714c;
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+        }
+        
+        .gift-section h2 {
+            color: white;
+        }
+        
+        .gift-section p {
+            line-height: 1.8;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        
+        .qr-code {
+            width: 150px;
+            height: auto;
+            background: transparent;
+            margin: 30px auto;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        /* RSVP Section */
+        .rsvp-section {
+            background: white;
+            padding: 50px 30px;
+            text-align: center;
+        }
+        
+        .rsvp-deadline {
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: #6b7d5c;
+            font-weight: 600;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #6b714c;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1em;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #6b714c;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .footer h6 {
+            color: white;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+			<br>
+		
+			
+			<br>
+			<br>
+            <div class="names">Rachelle</div>
+            <div class="ampersand">and</div>
+            <div class="names">Tom</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+            <div class="date-short">23 . 01 . 26</div>
+        </div>
+        
+        <!-- Photo Section -->
+        <div class="photo-section">
+          <div class="photo-frame">
+                <img src="https://i.imgur.com/7ms3ORk.jpg" alt="Rachelle and Rustom" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+        
+        <!-- Photo Section2 -->
+      <div class="photo-section2">
+            
+      </div>
+        
+        <!-- Ceremony -->
+        <div class="section section-with-bg">
+            <img src="https://i.imgur.com/KGXbXLB.png" width="70" height="auto" alt=""/>
+            <h2>Ceremony</h2>
+<div class="divider"></div>
+            <p class="info-text">1:00 PM</p>
+            <div class="location-name">Iglesia Ni Cristo - Lokal ng San Nicolas</div>
+            <p class="info-text2">Cuneta Street, Ligas 3, Bacoor, Cavite</p>
+            <a href="https://maps.app.goo.gl/SGkpp7yhztNhnFcZ9" target="_blank" class="map-link">View Location</a>
+        </div>
+        <!-- Reception -->
+      <div class="section section-with-bg">
+            <img src="https://i.imgur.com/fDb9aRn.png" width="70" height="auto" alt=""/>
+            <h2>Reception</h2>
+<div class="divider"></div>
+            <p class="info-text">3:00 PM</p>
+            <div class="location-name">J. Solis Function Hall</div>
+            <span class="info-text2">Molino Road, Bacoor, Cavite</span>
+            <a href="https://maps.app.goo.gl/H51AUffPAJzA8R786" target="_blank" class="map-link">View Location</a>
+
+      </div>
+        
+		  <!-- Direction -->
+		     <div class="section section-with-bg">
+		            <h6><img src="https://i.imgur.com/0DKOG0X.png" width="70" height="auto" alt=""/></h6>
+		            <h6>Ceremony to Reception</h6>
+<div class="divider"></div>
+            <a href="https://maps.app.goo.gl/AgAEUC6NsgNYpfrs5" target="_blank" class="map-link">View Direction</a>
+				 <br>
+		  <br>
+			<br>
+      </div>
+		
+        <!-- Attire -->
+        <div class="attire-section">
+			            <div class="section-icon"></div>
+            <h2>Attire</h2>
+            <img src="https://i.imgur.com/CEzu7xG.png" width="200" height="auto" alt=""/>
+            <p><strong>FORMAL ATTIRE</strong></p>
+           We request that our guests wear formal attire.
+            </p>
+		<br>
+        </div>
+        
+        <!-- Principal Sponsors -->
+
+<div class="section section-with-bg">
+
+            <h2 style="text-align: center;">Principal Sponsors</h2>
+            <div class="divider"></div>
+            
+            <div class="parents-section">
+                <div class="parent-box">
+                    <h4>Groom's Parents</h4>
+                    <p>Rogelio Cabal<br>Josephine Cabal</p>
+                </div>
+                <div class="parent-box">
+                    <h4>Bride's Parents</h4>
+                    <p>Anastacio Gimoro<br>Necy Gimoro</p>
+                </div>
+            </div>
+            
+            <div class="sponsors-grid">
+                <div class="sponsor-group">
+                    <h3>Principal Sponsors</h3>
+                    <p>Mr. Silvester Butil</p>
+                    <p>Mr. Elias Gimoro</p>
+                    <p>Mr. Ronnel Dimaculangan</p>
+                </div>
+                
+                <div class="sponsor-group">
+                    <h3>Principal Sponsors</h3>
+                    <p>Mrs. Judith Ruiz</p>
+                    <p>Mrs. Luisa Pamintuan</p>
+                    <p>Mrs. Rosalina Dinlasan</p>
+                </div>
+                
+				<div class="sponsor-group">
+                    <h3>Bestman</h3>
+                    <p>Rudy Cabal</p>
+                </div>
+                
+                <div class="sponsor-group">
+                    <h3>Maid of Honor</h3>
+                    <p>Marie Rose Navajas</p>
+                </div>
+				
+                <div class="sponsor-group">
+                    <h3>Groomsmen</h3>
+                    <p>Arthur Gimoro</p>
+                    <p>Artagnian Gimoro</p>
+                    <p>Cris Manuel Estioco</p>
+                </div>
+                
+                <div class="sponsor-group">
+                    <h3>Bridesmaids</h3>
+                    <p>Queen Lea Pagdonsolan</p>
+                    <p>Baby Lorielyn Vergara</p>
+                    <p>Genievere Anna Daisog</p>
+                </div>
+                
+                <div class="sponsor-group">
+                    <h3>Ring Bearer</h3>
+                    <p>Artaine Elijah Gimoro</p>
+                </div>
+				
+				<div class="sponsor-group">
+                    <h3>Flower Girl</h3>
+                    <p>Corhyn Megumi L. Ruiz</p>
+                </div>
+				
+				<br>
+				<br>
+
+				
+				
+            </div>
+        </div>
+
+        
+        <!-- Gift Suggestion -->
+        <div class="gift-section">
+            <div class="section-icon" style="color: white;"><img src="https://i.imgur.com/hS75JXw.png" width="70" height="auto" alt=""/></div>
+            <h2>Gift Suggestion</h2>
+            <div class="divider" style="background: white;"></div>
+            <br>the best gift is your pressence,
+            <br>but if you’d like to give us a small gift, <br>here’s an option</br>
+            <div class="qr-code">
+  <img src="https://i.imgur.com/NBWFx21.png" alt="instapay" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+        
+        <!-- RSVP -->
+        <div class="rsvp-section">
+            <div class="section-icon"><img src="https://i.imgur.com/E5ta4Gz.png" width="70" height="auto" alt=""/></div>
+            <h2>Confirmation</h2>
+            <div class="divider"></div>
+            <p class="info-text">Kindly confirm your attendance by</p>
+            <div class="rsvp-deadline">December 25, 2025</div>
+            <a href="https://forms.gle/6hGRovxRMH7S9HE87" class="btn" target="_blank">Submit RSVP Form</a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <h6>Thank you very much!</h6>
+            <p style="margin-top: 15px; opacity: 0.9;">We can't wait to celebrate with you!</p>
+        </div>
+    </div>
+</body>
+</html>
